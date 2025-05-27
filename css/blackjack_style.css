@@ -1,0 +1,44 @@
+body{
+    background:rgba(2, 44, 23, 0.888);
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+}
+
+.blackjack img{
+    width:10%;
+    margin:1px;
+}
+.blackjack button{
+    margin-top: 30px;
+    border-radius: 10px;
+    color: white;
+    width: 15%;
+    background-color: #052918;
+}
+
+.blackjack p2,h2{
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top:10px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.gameImgContainer {
+    position: relative;
+}
+
+.play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.play:hover{
+    background-color: rgba(2, 44, 23, 0.888);
+}

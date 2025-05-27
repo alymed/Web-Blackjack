@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/blackjack_style.css">
+  <link rel="icon" href="img/cards_logo.jpg">
+  <title>Blackjack</title>
+</head>
+
+<body>
+  <main class="blackjack">
+    <header>
+      <h1 style="font-size:50px;">Blackjack at ISEL's Casino</h1>
+      <button id="pause-audio" style= "margin-top: 5px;" onclick="pauseAudio()">Pause Audio</button>
+      <button id="replay-audio" style= "margin-top: 5px;" onclick="replayAudio()">Replay Audio</button>
+    </header>
+    <section id="game">
+      
+      <h2>Dealer<span id="dealer-points"></span> </h2>
+      <p id="dealer"></p>
+      <div id="dealer-cards"></div>
+      <p id="dealer-info"></p>
+
+      <h2>Player<span id="player-points"></span> </h2>
+      <p id="player"></p>
+      <div id="player-cards"></div>
+      <p id="player-info"></p>
+    
+      <audio id="audio" autoplay><source src="audio/audio.mp3"></audio>
+
+      <button id="card" type="button" onclick="player_new_card()">Card</button>
+      <button id="stand" type="button" onclick="dealer_finish()">Stand</button>
+      <button id="new_game" type="button" onclick="new_game()" disabled>New Game</button>
+    </section>
+
+    <section id="sec_debug">
+      <h2>Debug</h2>
+      <p id="debug"  style="margin-left:100px;margin-right:100px;inline-size:auto;
+      overflow-wrap: break-word;"></p>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+  <script src="js/blackjack_object.js"></script>
+  <script src="js/blackjack_manager.js"></script>
+  <script>window.onload = new_game();</script>
+</body>
+</html>
